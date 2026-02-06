@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+section {
+  text-align: center;
+}
 
 body {
   margin: 0;
@@ -66,6 +69,7 @@ section {
   padding: 20px;
   border-radius: 10px;
   width: 300px;
+  text-align: center;
 }
 
 .project-btn {
