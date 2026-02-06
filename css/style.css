@@ -60,9 +60,11 @@ section {
 
 .projects-container {
   display: flex;
+  justify-content: center;   /* CENTER HORIZONTALLY */
   gap: 20px;
   flex-wrap: wrap;
 }
+
 
 .project-card {
   border: 2px solid var(--dark);
