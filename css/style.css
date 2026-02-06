@@ -66,6 +66,7 @@ section {
 }
 
 
+
 .project-card {
   border: 2px solid var(--dark);
   padding: 20px;
@@ -88,6 +89,11 @@ section {
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+.project-card:hover {
+  transform: translateY(-4px);
+  transition: 0.2s ease;
+}
+
 
 footer {
   background: var(--dark);
