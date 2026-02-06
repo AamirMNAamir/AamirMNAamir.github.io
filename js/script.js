@@ -1,17 +1,11 @@
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
 function toggleDetails(button) {
-  const details = button.nextElementSibling; // the .project-details div
+  const details = button.nextElementSibling;
+
   if (details.style.maxHeight) {
-    details.style.maxHeight = null;  // collapse
+    details.style.maxHeight = null;
     button.textContent = "Show Details";
   } else {
-    details.style.maxHeight = details.scrollHeight + "px";  // expand
+    details.style.maxHeight = details.scrollHeight + "px";
     button.textContent = "Hide Details";
   }
 }
