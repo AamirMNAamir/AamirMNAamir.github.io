@@ -1,45 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Aamir Nasoordeen | Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Aamir Nasoordeen – Computer Engineering undergraduate specializing in system-level programming, embedded systems, and software development.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
-  <h1>Aamir Nasoordeen</h1>
-  <p>Computer Engineering Undergraduate</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
+<main>
+
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Aamir Nasoordeen</h1>
+  <p class="subtitle">Computer Engineering Undergraduate</p>
+  <p class="tagline">
+    System-level programming • Embedded systems • Software development
+  </p>
+
+  <a href="resume/Aamir_Nasoordeen_Resume.pdf" class="btn" target="_blank" download>
+    Download Resume
+  </a>
+</section>
+
+<!-- About -->
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a Computer Engineering undergraduate at the University of Peradeniya,
-    passionate about software development and system-level programming.
+    I am a Computer Engineering undergraduate at the University of Peradeniya with hands-on experience in system-level programming and software development.
+    I’m particularly interested in C programming, embedded systems, and computer networks, and I enjoy building efficient, low-level solutions to real-world problems.
   </p>
 </section>
 
+<!-- Skills -->
 <section id="skills">
   <h2>Skills</h2>
-  <ul>
-    <li>C, Python, Java</li>
-    <li>HTML, CSS, JavaScript</li>
-    <li>ARM Assembly, MATLAB</li>
+
+  <ul class="skills">
+    <li>C</li>
+    <li>Python</li>
+    <li>Java</li>
+    <li>ARM Assembly</li>
+    <li>Linux</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>MATLAB</li>
   </ul>
 </section>
 
+<!-- Projects -->
 <section id="projects">
   <h2>Projects</h2>
-  <p><b>libtiny3d</b> – 3D software renderer in C</p>
-  <p><b>ARM Mini Shell</b> – Command-line shell using ARM32</p>
+
+  <div class="project">
+    <h3>libtiny3d – 3D Software Renderer</h3>
+    <p>
+      Developed a 3D software renderer from scratch implementing transformation pipelines,
+      clipping, and Lambertian lighting.
+    </p>
+    <p><strong>Technologies:</strong> C, Linear Algebra, Computer Graphics</p>
+    <p><strong>Key Learning:</strong> Low-level rendering logic, memory management, and mathematical modeling.</p>
+    <a href="https://github.com/AamirMNAamir/libtiny3d" target="_blank" rel="noopener noreferrer">
+      View on GitHub →
+    </a>
+  </div>
+
+  <div class="project">
+    <h3>ARM32 Mini Command-Line Shell</h3>
+    <p>
+      Designed and implemented a mini command-line shell supporting basic command execution on ARM architecture.
+    </p>
+    <p><strong>Technologies:</strong> ARM Assembly, Linux</p>
+    <p><strong>Key Learning:</strong> System calls, process control, and CPU architecture.</p>
+    <a href="https://github.com/AamirMNAamir/arm-mini-shell" target="_blank" rel="noopener noreferrer">
+      View on GitHub →
+    </a>
+  </div>
+
+  
+
 </section>
 
+<!-- Education -->
+<section id="education">
+  <h2>Education</h2>
+  <p><strong>BSc in Computer Engineering</strong></p>
+  <p>University of Peradeniya</p>
+  <p>2022 – Present</p>
+</section>
+
+<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: aamirnasoordeen@gmail.com</p>
-  <p>GitHub: github.com/yourusername</p>
+
+  <p><strong>Email:</strong> aamirnasoordeen@gmail.com</p>
+  <p>
+    <strong>GitHub:</strong>
+    <a href="https://github.com/AamirMNAamir" target="_blank" rel="noopener noreferrer">
+      github.com/AamirMNAamir
+    </a>
+  </p>
+  <p>
+    <strong>LinkedIn:</strong>
+    <a href="https://linkedin.com/in/aamirnasoordeen" target="_blank" rel="noopener noreferrer">
+      linkedin.com/in/aamirnasoordeen
+    </a>
+  </p>
+
+  <a href="resume/Aamir_Nasoordeen_Resume.pdf" class="btn secondary" target="_blank" download>
+    Download Resume
+  </a>
 </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Aamir Nasoordeen · Built with HTML & CSS</p>
+</footer>
 
 </body>
 </html>
