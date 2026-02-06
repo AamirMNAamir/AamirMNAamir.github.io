@@ -68,33 +68,37 @@
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>libtiny3d – 3D Software Renderer</h3>
-    <p>
-      Developed a 3D software renderer from scratch implementing transformation pipelines,
-      clipping, and Lambertian lighting.
-    </p>
-    <p><strong>Technologies:</strong> C, Linear Algebra, Computer Graphics</p>
-    <p><strong>Key Learning:</strong> Low-level rendering logic, memory management, and mathematical modeling.</p>
-    <a href="https://github.com/AamirMNAamir/libtiny3d" target="_blank" rel="noopener noreferrer">
-      View on GitHub →
-    </a>
-  </div>
+  <div class="projects-container">
 
-  <div class="project">
-    <h3>ARM32 Mini Command-Line Shell</h3>
-    <p>
-      Designed and implemented a mini command-line shell supporting basic command execution on ARM architecture.
-    </p>
-    <p><strong>Technologies:</strong> ARM Assembly, Linux</p>
-    <p><strong>Key Learning:</strong> System calls, process control, and CPU architecture.</p>
-    <a href="https://github.com/AamirMNAamir/arm-mini-shell" target="_blank" rel="noopener noreferrer">
-      View on GitHub →
-    </a>
-  </div>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <h3>libtiny3d – 3D Software Renderer</h3>
+      <button class="project-btn" onclick="toggleDetails(this)">Show Details</button>
+      <div class="project-details">
+        <ul>
+          <li>Developed a 3D software renderer implementing transformation pipelines, clipping, and Lambertian lighting.</li>
+          <li><strong>Technologies:</strong> C, Linear Algebra, Computer Graphics</li>
+          <li><strong>Key Learning:</strong> Low-level rendering logic, memory management, math modeling for 3D graphics.</li>
+          <li><a href="https://github.com/AamirMNAamir/libtiny3d" target="_blank">View on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
 
-  
+    <!-- Project 2 -->
+    <div class="project-card">
+      <h3>ARM32 Mini Command-Line Shell</h3>
+      <button class="project-btn" onclick="toggleDetails(this)">Show Details</button>
+      <div class="project-details">
+        <ul>
+          <li>Designed and implemented a mini command-line shell supporting basic command execution on ARM.</li>
+          <li><strong>Technologies:</strong> ARM Assembly, Linux</li>
+          <li><strong>Key Learning:</strong> System calls, process control, CPU architecture.</li>
+          <li><a href="https://github.com/AamirMNAamir/arm-mini-shell" target="_blank">View on GitHub</a></li>
+        </ul>
+      </div>
+    </div>
 
+        
 </section>
 
 <!-- Education -->
