@@ -212,6 +212,10 @@ footer {
 }
 /* ================= CONTACT ================= */
 
+#contact {
+  text-align: center;
+}
+
 .contact-list {
   max-width: 500px;
   margin: 0 auto;
@@ -219,8 +223,9 @@ footer {
 
 .contact-item {
   display: flex;
+  justify-content: center;   /* CENTER HORIZONTALLY */
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   margin: 15px 0;
   font-size: 1.05rem;
 }
@@ -228,7 +233,6 @@ footer {
 .contact-item i {
   font-size: 1.3rem;
   color: #0a192f;
-  width: 25px;
 }
 
 .contact-item a {
