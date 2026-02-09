@@ -210,3 +210,32 @@ footer {
     text-align: justify;
   }
 }
+/* ================= CONTACT ================= */
+
+.contact-list {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  font-size: 1.05rem;
+}
+
+.contact-item i {
+  font-size: 1.3rem;
+  color: #0a192f;
+  width: 25px;
+}
+
+.contact-item a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #64ffda;
+}
