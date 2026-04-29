@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,264 +16,372 @@
 
 <body>
 
-<header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#volunteering">Volunteering</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <h1>Aamir Nasoordeen</h1>
-  <p class="subtitle">Computer Engineering Undergraduate</p>
-  <p class="tagline">
-    System-level programming • Embedded systems • Software development
-  </p>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <h1>
+        Hi, I'm <span class="highlight">Aamir Nasoordeen</span>
+      </h1>
 
-  <a href="pdfs/Aamir_Nasoordeen_Resume.pdf"
-     class="btn"
-     download
-     target="_blank">
-     Download Resume
-  </a>
-</section>
+      <p class="subtitle">Computer Engineering Undergraduate</p>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-
-  <div class="about-container">
-    <!-- Photo -->
-    <div class="about-image">
-      <img src="images/aamir.jpg" alt="Aamir Nasoordeen">
-    </div>
-
-    <!-- Text -->
-    <div class="about-text">
-      <p>
-        I am a curious and motivated Computer Engineering undergraduate with a
-        strong foundation in programming, Linux-based systems, and analytical
-        problem-solving. I enjoy working close to the system level, where
-        understanding how software interacts with hardware plays a critical role
-        in building efficient solutions.
+      <p class="tagline">
+        <span>System-level programming</span> •
+        <span>Embedded systems</span> •
+        <span>Software development</span>
       </p>
 
-      <p>
-        I am particularly interested in real-world applications of
-        virtualization, DevOps practices, and emerging technologies such as
-        Large Language Models. Through academic projects and self-directed
-        learning, I have gained hands-on experience in system-level programming,
-        embedded concepts, and software development workflows.
-      </p>
 
-      <p>
-        I am passionate about continuously learning new technologies and applying
-        them to solve practical engineering problems. I value collaborative
-        environments where ideas are shared openly, and I aim to contribute to
-        innovative projects that emphasize performance, reliability, and
-        scalability.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<!-- SKILLS -->
-<!-- SKILLS -->
-<section id="skills">
-  <h2>Skills</h2>
-
-  <div class="skills-box-container">
-
-    <!-- Programming -->
-    <div class="skills-box">
-      <h3>Programming</h3>
-
-      <div class="skill-line">
-        <span>C</span>
-        <div class="bar"><div class="fill" data-percent="80%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>Python</span>
-        <div class="bar"><div class="fill" data-percent="80%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>Java</span>
-        <div class="bar"><div class="fill" data-percent="70%"></div></div>
-      </div>
-    </div>
-
-    <!-- Web -->
-    <div class="skills-box">
-      <h3>Web</h3>
-
-      <div class="skill-line">
-        <span>HTML</span>
-        <div class="bar"><div class="fill" data-percent="85%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>CSS</span>
-        <div class="bar"><div class="fill" data-percent="80%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>JavaScript</span>
-        <div class="bar"><div class="fill" data-percent="70%"></div></div>
-      </div>
-    </div>
-
-    <!-- Systems -->
-    <div class="skills-box">
-      <h3>Systems</h3>
-
-      <div class="skill-line">
-        <span>ARM Assembly</span>
-        <div class="bar"><div class="fill" data-percent="70%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>Linux</span>
-        <div class="bar"><div class="fill" data-percent="75%"></div></div>
-      </div>
-    </div>
-
-    <!-- Tools -->
-    <div class="skills-box">
-      <h3>Tools</h3>
-
-      <div class="skill-line">
-        <span>Git</span>
-        <div class="bar"><div class="fill" data-percent="85%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>GitHub</span>
-        <div class="bar"><div class="fill" data-percent="80%"></div></div>
-      </div>
-
-      <div class="skill-line">
-        <span>MATLAB</span>
-        <div class="bar"><div class="fill" data-percent="70%"></div></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="projects-container">
-
-    <div class="project-card">
-      <h3>libtiny3d – 3D Software Renderer</h3>
-      <button class="project-btn" onclick="toggleDetails(this)">Show Details</button>
-
-      <div class="project-details">
-        <ul>
-          <li>Built a 3D software renderer from scratch</li>
-          <li><strong>Tech:</strong> C, Linear Algebra</li>
-          <li>Implemented transformations, clipping, lighting</li>
-          
-        </ul>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>ARM32 Mini Command-Line Shell</h3>
-      <button class="project-btn" onclick="toggleDetails(this)">Show Details</button>
-
-      <div class="project-details">
-        <ul>
-          <li>Mini shell supporting basic commands</li>
-          <li><strong>Tech:</strong> ARM Assembly, Linux</li>
-          <li>Learned system calls & process control</li>
-          
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
-
-  <div class="education-box">
-    <h3>BSc in Computer Engineering</h3>
-    <p><strong>University of Peradeniya</strong></p>
-    <p>2024 – Present</p>
-  </div>
-
-  <div class="education-box">
-    <h3>G.C.E. Advanced Level (A/L) – Physical Science Stream</h3>
-    <p><strong>Kekunagolla National School</strong></p>
-    <p>Index No: 3832554</p>
-    <p>Year: 2024</p>
-
-    <a href="pdfs/AL_Result_Sheet.pdf"
-       class="btn secondary"
-       target="_blank"
-       download>
-      📄 Download A/L Result Sheet
-    </a>
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-
-  <div class="contact-list">
-
-    <div class="contact-item">
-      <i class="fa-solid fa-phone"></i>
-      <span>+94 76 88 5 22 93</span>
-    </div>
-
-    <div class="contact-item">
-      <i class="fa-solid fa-envelope"></i>
-      <span>aamirnasoordeen@gmail.com</span>
-    </div>
-
-    <div class="contact-item">
-      <i class="fa-brands fa-github"></i>
-      <a href="https://github.com/AamirMNAamir" target="_blank">
-        AamirMNAamir
+      <a href="pdfs/Aamir_Nasoordeen_Resume.pdf" class="btn" download target="_blank">
+        Download Resume
       </a>
-    </div>
+    </section>
 
-    <div class="contact-item">
-      <i class="fa-brands fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/aamir-nasoordeen-316023348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-        Aamir Nasoordeen
-      </a>
-    </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
 
-  </div>
-</section>
+      <div class="about-container">
+        <!-- Photo -->
+        <div class="about-image">
+          <img src="images/aamir.jpg" alt="Aamir Nasoordeen">
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p>
+            I am a curious and motivated Computer Engineering undergraduate with a
+            strong foundation in programming, Linux-based systems, and analytical
+            problem-solving. I enjoy working close to the system level, where
+            understanding how software interacts with hardware plays a critical role
+            in building efficient solutions.
+          </p>
+
+          <p>
+            I am particularly interested in real-world applications of
+            virtualization, DevOps practices, and emerging technologies such as
+            Large Language Models. Through academic projects and self-directed
+            learning, I have gained hands-on experience in system-level programming,
+            embedded concepts, and software development workflows.
+          </p>
+
+          <p>
+            I am passionate about continuously learning new technologies and applying
+            them to solve practical engineering problems. I value collaborative
+            environments where ideas are shared openly, and I aim to contribute to
+            innovative projects that emphasize performance, reliability, and
+            scalability.
+          </p>
+        </div>
+      </div>
+    </section>
 
 
-</main>
+    <!-- SKILLS -->
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
 
-<footer>
-  <p>© 2026 Aamir Nasoordeen</p>
-</footer>
+      <div class="skills-box-container">
 
-<script src="js/script.js"></script>
+        <!-- Programming -->
+        <div class="skills-box">
+          <h3>Programming</h3>
+
+          <div class="skill-line">
+            <span>C</span>
+            <div class="bar">
+              <div class="fill" data-percent="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>Python</span>
+            <div class="bar">
+              <div class="fill" data-percent="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>Java</span>
+            <div class="bar">
+              <div class="fill" data-percent="70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web -->
+        <div class="skills-box">
+          <h3>Web</h3>
+
+          <div class="skill-line">
+            <span>HTML</span>
+            <div class="bar">
+              <div class="fill" data-percent="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>CSS</span>
+            <div class="bar">
+              <div class="fill" data-percent="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>JavaScript</span>
+            <div class="bar">
+              <div class="fill" data-percent="70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Systems -->
+        <div class="skills-box">
+          <h3>Systems</h3>
+
+          <div class="skill-line">
+            <span>ARM Assembly</span>
+            <div class="bar">
+              <div class="fill" data-percent="70%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>Linux</span>
+            <div class="bar">
+              <div class="fill" data-percent="75%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skills-box">
+          <h3>Tools</h3>
+
+          <div class="skill-line">
+            <span>Git</span>
+            <div class="bar">
+              <div class="fill" data-percent="85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>GitHub</span>
+            <div class="bar">
+              <div class="fill" data-percent="80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-line">
+            <span>MATLAB</span>
+            <div class="bar">
+              <div class="fill" data-percent="70%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-container">
+
+        <div class="project-card">
+          <h3>libtiny3d – 3D Software Renderer</h3>
+          <div class="project-tags">
+            <span>C</span>
+            <span>Linear Algebra</span>
+            <span>Graphics</span>
+          </div>
+          <p class="project-desc">Built a 3D software renderer from scratch. Implemented transformations, clipping, and
+            lighting models without external APIs.</p>
+          <div class="project-links">
+            <a href="https://github.com/AamirMNAamir/libtiny3d_-Software_Renderer" target="_blank"><i
+                class="fa-brands fa-github"></i> Source
+              Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>ARM32 Mini Shell</h3>
+          <div class="project-tags">
+            <span>ARM Assembly</span>
+            <span>Linux</span>
+            <span>OS</span>
+          </div>
+          <p class="project-desc">Mini command-line shell supporting basic commands, built to learn system calls and
+            process control natively on ARM architecture.</p>
+          <div class="project-links">
+            <a href="https://github.com/AamirMNAamir" target="_blank"><i class="fa-brands fa-github"></i> Source
+              Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Web-Based PAR Index System</h3>
+          <div class="project-tags">
+            <span>Spring Boot</span>
+            <span>React</span>
+            <span>Three.js (WebGL)</span>
+          </div>
+          <p class="project-desc">A full-stack web platform for orthodontists to securely upload, visualize, and analyze
+            3D dental models (Upper, Lower, Buccal) to automatically calculate PAR index scores. Features secure user
+            accounts and case management.</p>
+          <div class="project-links">
+            <a href="https://github.com/AamirMNAamir/e22-co2060-Web_Based_PAR_Index_System" target="_blank"><i
+                class="fa-brands fa-github"></i> Source
+              Code</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VOLUNTEERING -->
+    <section id="volunteering">
+      <h2>Volunteering & Experience</h2>
+
+      <div class="experience-box">
+        <h3>Casual Instructor</h3>
+        <p><strong>Department of Computer Engineering, University of Peradeniya</strong></p>
+        <p>Dec 2025 – Present · 5 mos</p>
+        <p>On-site</p>
+        <br>
+        <p>• Working as an instructor for <strong>CO1010 Programming for Engineering</strong> for E24.</p>
+        <p>• Since April 2026, working as an instructor for <strong>EE 1810 Electronics</strong> for E24.</p>
+      </div>
+
+      <div class="experience-box">
+        <h3>Executive Committee Member</h3>
+        <p><strong>MESWA (Muslim Engineering Student Welfare Association) </strong></p>
+        <p><strong>University of Peradeniya</strong></p>
+        <p>2025 – 2026</p>
+        <br>
+        <p>• Serving as the <strong>Welfare Service Secretary</strong> (2026).</p>
+        <p>• Served as an <strong>Editor</strong> (2025).</p>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="education-box">
+        <h3>BSc in Computer Engineering</h3>
+        <p><strong>University of Peradeniya</strong></p>
+        <p>2024 – Present</p>
+      </div>
+
+      <div class="education-box">
+        <h3>G.C.E. Advanced Level (A/L) – Physical Science Stream</h3>
+        <p><strong>Kekunagolla National School</strong></p>
+        <p>Index No: 3832554</p>
+        <p>Year: 2022</p>
+        <p>Results: 3A </p>
+        <p>Z-Score: 1.9782</p>
+
+
+
+        <a href="pdfs/AL_Result_Sheet.pdf" class="btn secondary" target="_blank" download>
+          📄 Download A/L Result Sheet
+        </a>
+      </div>
+
+      <div class="education-box">
+        <h3>G.C.E. Ordinary Level (O/L)</h3>
+        <p><strong>NK/ Abukkagama Muslim Maha Vidyalaya</strong></p>
+        <p>Index No: 93395302</p>
+        <p>Year: 2019</p>
+        <p>Results: 9A </p>
+
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h3>Get In Touch</h3>
+          <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-wrapper">
+            <form id="contact-form" action="https://formspree.io/f/xjgjnnyg" method="POST">
+              <input type="hidden" name="_subject" value="New Portfolio Message">
+              
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn" id="submit-btn">Send Message</button>
+              <p id="form-status" class="form-status"></p>
+            </form>
+          </div>
+
+          <div class="contact-links-wrapper">
+            <div class="contact-links">
+              <a href="mailto:aamirnasoordeen@gmail.com" class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>aamirnasoordeen@gmail.com</span>
+              </a>
+
+              <a href="tel:+94768852293" class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+94 76 88 5 22 93</span>
+              </a>
+
+              <a href="https://github.com/AamirMNAamir" target="_blank" class="contact-item">
+                <i class="fa-brands fa-github"></i>
+                <span>AamirMNAamir</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/aamir-nasoordeen-316023348" target="_blank" class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Aamir Nasoordeen</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>© 2026 Aamir Nasoordeen</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
