@@ -376,7 +376,8 @@ h2::after {
 }
 
 /* ================= EDUCATION & EXPERIENCE ================= */
-.education-box, .experience-box {
+.education-box,
+.experience-box {
   background: var(--bg-card);
   border: 1px solid var(--card-border);
   border-radius: 16px;
@@ -388,12 +389,14 @@ h2::after {
   text-align: left;
 }
 
-.education-box:hover, .experience-box:hover {
+.education-box:hover,
+.experience-box:hover {
   border-color: rgba(56, 189, 248, 0.2);
   transform: translateX(5px);
 }
 
-.education-box::before, .experience-box::before {
+.education-box::before,
+.experience-box::before {
   content: '';
   position: absolute;
   left: 0;
@@ -403,19 +406,22 @@ h2::after {
   background: var(--accent-gradient);
 }
 
-.education-box h3, .experience-box h3 {
+.education-box h3,
+.experience-box h3 {
   margin-top: 0;
   color: var(--text-primary);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
-.education-box p, .experience-box p {
+.education-box p,
+.experience-box p {
   color: var(--text-secondary);
   margin: 0.3rem 0;
 }
 
-.education-box strong, .experience-box strong {
+.education-box strong,
+.experience-box strong {
   color: var(--accent-primary);
 }
 
@@ -557,6 +563,7 @@ footer {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+<<<<<<< HEAD
   .hero h1 { font-size: 3rem; }
   .about-container { flex-direction: column; text-align: center; gap: 2rem; }
   .about-image { margin: 0 auto; }
@@ -582,4 +589,84 @@ footer {
   .contact-item { flex-direction: column; text-align: center; padding: 1rem; }
   .contact-item span { font-size: 0.9rem; word-break: break-word; }
   .skills-box-container { grid-template-columns: 1fr; }
+=======
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-image {
+    margin: 0 auto;
+  }
+
+  nav {
+    padding: 1rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .education-box,
+  .experience-box {
+    padding: 1.5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+>>>>>>> b450c4d (small edit in page)
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-item span {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .skills-box-container {
+    grid-template-columns: 1fr;
+  }
 }
