@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta name="description" content="Aamir Nasoordeen – Computer Engineering Undergraduate at University of Peradeniya">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <style>
     :root {
       --bg:        #060a0e;
@@ -31,7 +38,37 @@
       --ff-body:   'DM Sans', sans-serif;
       --radius:    6px;
       --radius-lg: 12px;
+      --noise-opacity: .45;
+      --grid-line: rgba(200,169,110,.022);
+      --header-bg: rgba(6,10,14,.9);
+      --header-bg-scrolled: rgba(6,10,14,.97);
+      --mobile-menu-bg: rgba(6,10,14,.98);
     }
+    html[data-theme="light"] {
+      --bg:        #f7f5f0;
+      --bg2:       #ffffff;
+      --bg3:       #f1ede4;
+      --bg4:       #e8e2d4;
+      --border:    rgba(20,20,15,0.08);
+      --border2:   rgba(20,20,15,0.14);
+      --gold:      #9c7a3d;
+      --gold2:     #7a5f2f;
+      --gold3:     #8a6d3b;
+      --glow:      rgba(156,122,61,0.08);
+      --glow2:     rgba(156,122,61,0.16);
+      --text:      #201d17;
+      --text2:     #4a453b;
+      --muted:     #756f62;
+      --accent:    #2f6fb0;
+      --red:       #b3374f;
+      --green:     #2f8a63;
+      --noise-opacity: .2;
+      --grid-line: rgba(140,109,59,.035);
+      --header-bg: rgba(247,245,240,.9);
+      --header-bg-scrolled: rgba(247,245,240,.97);
+      --mobile-menu-bg: rgba(247,245,240,.98);
+    }
+    * { transition: background-color .35s ease, border-color .35s ease, color .35s ease; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -52,14 +89,14 @@
       content: '';
       position: fixed; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.025'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9999; opacity: .45;
+      pointer-events: none; z-index: 9999; opacity: var(--noise-opacity);
     }
     /* GRID */
     body::after {
       content: ''; position: fixed; inset: 0;
       background-image:
-        linear-gradient(rgba(200,169,110,.022) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,169,110,.022) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none; z-index: 0;
     }
@@ -79,13 +116,13 @@
     /* NAV */
     header {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 0 4rem; background: rgba(6,10,14,.9);
+      padding: 0 4rem; background: var(--header-bg);
       backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
       border-bottom: 1px solid var(--border); height: 68px;
       display: flex; align-items: center;
       transition: background .3s, box-shadow .3s;
     }
-    header.scrolled { background: rgba(6,10,14,.97); box-shadow: 0 1px 40px rgba(0,0,0,.5); }
+    header.scrolled { background: var(--header-bg-scrolled); box-shadow: 0 1px 40px rgba(0,0,0,.5); }
     nav { display: flex; gap: .1rem; align-items: center; width: 100%; justify-content: flex-end; }
     .nav-logo {
       font-family: var(--ff-display); font-size: 1.35rem; font-weight: 700;
@@ -105,6 +142,18 @@
     nav a:hover { color: var(--gold); background: var(--glow); }
     nav a.active { color: var(--gold); }
 
+    /* THEME TOGGLE */
+    .theme-toggle {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; margin-left: .75rem; flex-shrink: 0;
+      background: transparent; border: 1px solid var(--border); border-radius: 100px;
+      color: var(--muted); cursor: pointer; font-size: .78rem;
+      transition: color .2s, border-color .2s, background .2s, transform .2s;
+    }
+    .theme-toggle:hover { color: var(--gold); border-color: rgba(200,169,110,.35); background: var(--glow); transform: translateY(-1px); }
+    .theme-toggle:active { transform: translateY(0); }
+    .mobile-menu .theme-toggle { margin: .5rem 0 0; width: 100%; height: auto; padding: .75rem 1rem; border-radius: var(--radius); gap: .6rem; font-family: var(--ff-mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+
     /* HAMBURGER */
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -119,7 +168,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--gold); }
     .mobile-menu {
       display: none; position: fixed; top: 68px; left: 0; right: 0;
-      background: rgba(6,10,14,.98); border-bottom: 1px solid var(--border);
+      background: var(--mobile-menu-bg); border-bottom: 1px solid var(--border);
       padding: 2rem; flex-direction: column; gap: .5rem; z-index: 99;
       backdrop-filter: blur(24px);
     }
@@ -493,6 +542,9 @@
       <a href="#volunteering">Experience</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark theme">
+        <i class="fa-solid fa-sun" id="theme-icon"></i>
+      </button>
       <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
@@ -507,6 +559,9 @@
     <a href="#volunteering" onclick="closeMenu()">Experience</a>
     <a href="#education" onclick="closeMenu()">Education</a>
     <a href="#contact" onclick="closeMenu()">Contact</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark theme">
+      <i class="fa-solid fa-sun" id="theme-icon-mobile"></i>&nbsp; Toggle Theme
+    </button>
   </div>
 
   <main>
@@ -733,6 +788,76 @@
             </div>
           </div>
 
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-card-art">
+                <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="180" fill="#0f161f"/>
+                  <rect x="30" y="24" width="150" height="132" rx="4" fill="#0b1018" stroke="rgba(200,169,110,0.16)" stroke-width="1"/>
+                  <line x1="45" y1="46" x2="165" y2="46" stroke="rgba(200,169,110,0.3)" stroke-width="1"/>
+                  <line x1="45" y1="64" x2="150" y2="64" stroke="rgba(106,116,128,0.4)" stroke-width="1"/>
+                  <line x1="45" y1="78" x2="160" y2="78" stroke="rgba(106,116,128,0.4)" stroke-width="1"/>
+                  <line x1="45" y1="92" x2="140" y2="92" stroke="rgba(106,116,128,0.4)" stroke-width="1"/>
+                  <circle cx="52" cy="112" r="9" fill="none" stroke="rgba(76,175,138,0.55)" stroke-width="1"/>
+                  <path d="M48 112 l3 3 l6 -7" stroke="rgba(76,175,138,0.75)" stroke-width="1" fill="none"/>
+                  <line x1="68" y1="112" x2="160" y2="112" stroke="rgba(106,116,128,0.4)" stroke-width="1"/>
+                  <line x1="45" y1="132" x2="130" y2="132" stroke="rgba(106,116,128,0.4)" stroke-width="1"/>
+                  <g fill="none" stroke="rgba(200,169,110,0.4)" stroke-width="1">
+                    <circle cx="270" cy="70" r="34"/>
+                    <circle cx="270" cy="70" r="6" fill="rgba(200,169,110,0.5)" stroke="none"/>
+                    <line x1="270" y1="36" x2="270" y2="46"/>
+                    <line x1="270" y1="94" x2="270" y2="104"/>
+                    <line x1="236" y1="70" x2="246" y2="70"/>
+                    <line x1="294" y1="70" x2="304" y2="70"/>
+                  </g>
+                  <rect x="230" y="118" width="80" height="30" rx="4" fill="rgba(200,169,110,0.06)" stroke="rgba(200,169,110,0.25)" stroke-width="1"/>
+                  <text x="270" y="137" font-family="monospace" font-size="9" fill="rgba(200,169,110,0.8)" text-anchor="middle">JWT · RBAC</text>
+                </svg>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-number">Project / 004</div>
+              <h3>FMDMS — Forensic Medicine Department Management System</h3>
+              <div class="project-tags"><span>React</span><span>Node.js / Express</span><span>MySQL</span></div>
+              <p class="project-desc">Full-stack case management system for a university forensic medicine department. Role-based access across 8 staff roles, an 18-table relational schema, JWT authentication with bcrypt hashing and account lockout, and end-to-end case-to-report workflows with a complete audit trail.</p>
+              <div class="project-links">
+                <a href="https://github.com/AamirMNAamir/forensic-medicine-management-system" target="_blank" class="primary"><i class="fa-brands fa-github"></i> View Source →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-top">
+              <div class="project-card-art">
+                <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="400" height="180" fill="#0f161f"/>
+                  <rect x="120" y="20" width="200" height="120" rx="4" fill="#0b1018" stroke="rgba(200,169,110,0.16)" stroke-width="1"/>
+                  <path d="M150 100 Q200 40 260 90 T310 60" stroke="rgba(200,169,110,0.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <circle cx="150" cy="100" r="3" fill="rgba(200,169,110,0.7)"/>
+                  <circle cx="310" cy="60" r="3" fill="rgba(200,169,110,0.7)"/>
+                  <g fill="none" stroke="rgba(76,175,138,0.65)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M60 150 L70 90 Q72 78 84 78 Q94 78 94 90 L94 118"/>
+                    <path d="M84 78 L82 60 Q82 50 90 50 Q98 50 98 60 L98 118"/>
+                    <path d="M98 60 L98 50 Q98 42 106 42 Q114 42 114 50 L114 118"/>
+                    <path d="M114 60 L114 52 Q114 44 122 44 Q130 44 130 52 L130 118"/>
+                    <path d="M60 150 Q55 118 68 108 L130 118 Q140 122 138 140 L132 158 Q128 168 116 168 L78 168 Q66 168 62 158 Z"/>
+                  </g>
+                  <circle cx="270" cy="130" r="10" fill="none" stroke="rgba(200,169,110,0.5)" stroke-width="1"/>
+                  <circle cx="270" cy="130" r="4" fill="rgba(200,169,110,0.6)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-card-body">
+              <div class="project-number">Project / 005</div>
+              <h3>VisionBoard AI — AI-Powered Virtual Whiteboard</h3>
+              <div class="project-tags"><span>Python</span><span>OpenCV</span><span>MediaPipe</span></div>
+              <p class="project-desc">Real-time virtual whiteboard using computer vision and AI-based hand tracking to recognize gestures, letting users draw in the air with no physical input device. Includes gesture recognition, real-time drawing, color selection, eraser tools, and image saving on a modular architecture built for future extensions like handwriting and shape recognition.</p>
+              <div class="project-links">
+                <a href="https://github.com/AamirMNAamir/VisionBoard-AI" target="_blank" class="primary"><i class="fa-brands fa-github"></i> View Source →</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -908,6 +1033,25 @@
       document.getElementById('mobile-menu').classList.remove('open');
       document.getElementById('hamburger').classList.remove('open');
     }
+
+    // Theme toggle
+    function updateThemeIcon(theme) {
+      const iconClass = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      const icon = document.getElementById('theme-icon');
+      const iconMobile = document.getElementById('theme-icon-mobile');
+      if (icon) icon.className = iconClass;
+      if (iconMobile) iconMobile.className = iconClass;
+    }
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      updateThemeIcon(theme);
+    }
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    }
+    updateThemeIcon(document.documentElement.getAttribute('data-theme') || 'dark');
 
     // Contact form
     const contactForm = document.getElementById('contact-form');
